@@ -19,6 +19,11 @@ const dataObject = [
         name:"Sandy Oman",
         position:"Programer",
         salary:22000
+    },
+    {
+        name:"Mario",
+        position:"Programer",
+        salary:18000
     }
 ]
 
@@ -36,3 +41,12 @@ const result2 =  dataObject.filter(e=>{
 })
 
 console.log(result2)
+
+//การกรองข้อมูลในรูปแบบ object หลายเงื่อนไข
+const result3 =  dataObject.filter(e=>{
+    return e.salary > 20000
+}).filter(e=>{
+    return e.position==="Programer"
+})
+
+console.log(result3)
